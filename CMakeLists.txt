@@ -10,7 +10,7 @@ option(BUILD_EXAMPLES "Build examples" ON)
 option(BUILD_SHARED_LIBS "Build SHARED libs if ON and STATIC otherwise" OFF)
 
 if(NOT BLAS)
-    set(BLAS atlas)
+    set(BLAS open)
 endif()
 
 if(NOT CUDA_TEST_DEVICE)
@@ -36,6 +36,7 @@ endif()
 
 #    Include Directories
 set(${PROJECT_NAME}_INCLUDE_DIRS ${CMAKE_SOURCE_DIR}/include)
+include_directories(/opt/x86_full/gst/include)
 include_directories(${${PROJECT_NAME}_INCLUDE_DIRS})
 include_directories(${CMAKE_SOURCE_DIR}/src)
 
