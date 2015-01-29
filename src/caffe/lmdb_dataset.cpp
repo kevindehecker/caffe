@@ -48,7 +48,7 @@ bool LmdbDataset<K, V, KCoder, VCoder>::open(const string& filename,
     return false;
   }
 
-  retval = mdb_env_set_mapsize(env_, 1099511627776);
+  retval = mdb_env_set_mapsize(env_, 109951162777);
   if (MDB_SUCCESS != retval) {
     LOG(ERROR) << "mdb_env_set_mapsize failed " << mdb_strerror(retval);
     return false;
