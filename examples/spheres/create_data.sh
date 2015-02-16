@@ -9,8 +9,8 @@ echo "Creating $DBTYPE..."
 
 rm -rf $EXAMPLE/train_$DBTYPE  $EXAMPLE/test_$DBTYPE
 
-$TOOLS/convert_imageset-d -backend=$DBTYPE -gray -shuffle ~/Desktop/esa_noSphere/32 ~/Desktop/esa_noSphere/32/data.txt $EXAMPLE/train_$DBTYPE/
-$TOOLS/convert_imageset-d -backend=$DBTYPE -gray -shuffle ~/Desktop/esa_noSphere/32 ~/Desktop/esa_noSphere/32/data.txt $EXAMPLE/test_$DBTYPE/
+$TOOLS/convert_imageset-d -backend=$DBTYPE -gray -shuffle $EXAMPLE/data $EXAMPLE/data/data.txt $EXAMPLE/train_$DBTYPE/
+$TOOLS/convert_imageset-d -backend=$DBTYPE -gray -shuffle $EXAMPLE/data $EXAMPLE/data/data.txt $EXAMPLE/test_$DBTYPE/
 
 echo "Computing image mean..."
 
